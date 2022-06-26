@@ -1,0 +1,413 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.special-box {
+    z-index: 14;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #E6F0E7;
+    opacity: 1;
+    /* 弹性布局 水平+垂直居中 */
+    animation: box 5s ease-in-out forwards;
+}
+
+@keyframes box {
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.loader {
+    z-index: 15;
+    /* 相对定位 */
+    position: relative;
+    text-align: center;
+}
+
+.left-box {
+    z-index: 15;
+    /* 绝对定位 */
+    position: absolute;
+    top: 265px;
+    left: 800px;
+    /* 默认旋转0度 */
+    transform: rotate(0deg);
+}
+
+.right-box {
+    z-index: 15;
+    /* 绝对定位 */
+    position: absolute;
+    top: 281px;
+    left: 781px;
+    /* 默认旋转90度 */
+    transform: rotate(90deg);
+}
+
+.dots-top {
+    z-index: 15;
+    position: absolute;
+    top: -100px;
+    right: 270px;
+    transform: rotate(0deg);
+}
+
+.dots-bottom {
+    z-index: 15;
+    position: absolute;
+    top: 100px;
+    right: -240px;
+    transform: rotate(180deg);
+}
+
+.dot {
+    z-index: 15;
+    /* 绝对定位 */
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: 5;
+    /* 默认旋转45度 */
+    transform: rotate(45deg);
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: spin 3s linear forwards;
+}
+
+
+/* 圆点 */
+
+.dot::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/xiuqiu.png);
+    background-size: 100%;
+    border-radius: 50%;
+}
+
+
+/* 接下来为每一个圆点设置不同的层级、动画延迟时间、背景颜色、缩放 */
+
+
+/* 第一个默认就好，不用改 */
+
+
+/* 从第二个开始 */
+
+.dot:nth-child(2) {
+    z-index: 4;
+    animation-delay: 0.1s;
+}
+
+.dot:nth-child(2)::after {
+    transform: scale(0.8);
+}
+
+.dot:nth-child(3) {
+    z-index: 3;
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3)::after {
+    background-color: #83a393;
+    transform: scale(0.6);
+}
+
+.dot:nth-child(4) {
+    z-index: 2;
+    animation-delay: 0.3s;
+}
+
+.dot:nth-child(4)::after {
+    background-color: #ffef3d;
+    transform: scale(0.4);
+}
+
+.dot:nth-child(5) {
+    z-index: 1;
+    animation-delay: 0.4s;
+}
+
+.dot:nth-child(5)::after {
+    background-color: #ffea00;
+    transform: scale(0.2);
+}
+
+
+/* 定义动画 */
+
+@keyframes spin {
+    0% {
+        transform: rotate(405deg);
+    }
+    5% {
+        transform: rotate(405deg);
+        animation-timing-function: linear;
+    }
+    70% {
+        transform: rotate(45deg);
+        animation-timing-function: linear;
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    120% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.tittle-box {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(103, 125, 106);
+    color: aliceblue;
+    border: #a5a574;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.tittle-big-item {
+    width: 35vw;
+    height: 8vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-item {
+    width: 11vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-item:hover {
+    background-color: rgb(136, 142, 100);
+}
+
+.title1 {
+    width: 11vw;
+    height: 4vh;
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title2 {
+    width: 11vw;
+    height: 2vh;
+    font-size: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-box {
+    width: 8vw;
+    height: 6vh;
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0;
+    background-color: #199c84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    width: 11vw;
+}
+
+.download-box:hover {
+    background-color: rgb(178, 168, 98);
+}
+
+.wenzi {
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 27px;
+    vertical-align: middle;
+    font-family: "Microsoft Yahei";
+    text-align: center
+}
+
+.xiaozi {
+    color: #199c84;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 27px;
+    vertical-align: middle;
+    font-family: "Microsoft Yahei";
+    text-align: center
+}
+
+.zhengwen {
+    /* min-height: 400px; */
+    width: 1180px;
+    /* 据中 */
+    margin: 30px auto 0;
+    padding-bottom: 130px;
+    line-height: 30px;
+    font-family: "Microsoft YaHei";
+    box-sizing: border-box;
+    padding: 0 60px;
+    margin-top: 30px;
+}
+
+.zhengwen-2 {
+    font-family: "Microsoft YaHei";
+    box-sizing: border-box;
+    padding: 0 60px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.hr {
+    color: #199c84;
+}
+
+.basic-grey {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    background: #f5f5f5;
+    padding: 35px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #262222;
+    margin-top: 70px;
+    text-shadow: 10px 1px 1px #fff;
+    border: 4px solid #E4E4E4;
+}
+
+.basic-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom: 1px solid #dfd6d6;
+    margin: -10px -15px 30px -10px;
+    font-family: 黑体;
+    color: #696767;
+    line-height: 25px;
+}
+
+.basic-grey h1>span {
+    display: block;
+    font-size: 11px;
+}
+
+.basic-grey label {
+    display: block;
+    margin: -10px;
+}
+
+.basic-grey label>span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #4e4d4d;
+}
+
+.basic-grey input[type="text"],
+.basic-grey input[type="email"],
+.basic-grey textarea,
+.basic-grey select {
+    border: 1px solid #DADADA;
+    color: #4e4d4d;
+    height: 30px;
+    margin-bottom: 16px;
+    margin-right: 6px;
+    margin-top: 2px;
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    width: 70%;
+    font-size: 12px;
+    line-height: 15px;
+    box-shadow: inset 0px 1px 4px #ECECEC;
+    -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+    -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+}
+
+.basic-grey textarea {
+    padding: 5px 3px 3px 5px;
+}
+
+.basic-grey select {
+    background: #FFF url('down-arrow.png') no-repeat right;
+    background: #FFF url('down-arrow.png') no-repeat right;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width: 70%;
+    height: 35px;
+    line-height: 25px;
+}
+
+.basic-grey textarea {
+    height: 100px;
+}
+
+.basic-grey .button {
+    background: #677D6A;
+    border: none;
+    padding: 10px 25px 10px 25px;
+    color: #FFF;
+    box-shadow: 5px 5px 5px #b6b6b6;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px#536656;
+    cursor: pointer;
+}
+
+.basic-grey .button:hover {
+    background: #949e7f
+}
+
+.final-logo {
+    width: 100vw;
+    height: 30vh;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logoz {
+    width: 5vw;
+    /* height: 24vh; */
+    /* margin-top: 500px; */
+    margin-bottom: 30px;
+}
+
+.final-word {
+    font-size: 13px;
+    font-family: 黑体;
+    line-height: 25px;
+}

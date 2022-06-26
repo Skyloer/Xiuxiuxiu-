@@ -1,0 +1,325 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 410vh;
+    background-image: url(../img/about.jpg);
+    background-size: 100% 100%;
+}
+
+.tittle-box {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(103, 125, 106);
+    color: aliceblue;
+    border: #a5a574;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.tittle-big-item {
+    width: 35vw;
+    height: 8vh;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-item {
+    width: 11vw;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-item:hover {
+    background-color: rgb(136, 142, 100);
+}
+
+.title1 {
+    width: 11vw;
+    height: 4vh;
+    color: aliceblue;
+    text-decoration: none;
+    display: flex;
+    font-size: 17px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.title2 {
+    width: 11vw;
+    height: 2vh;
+    font-size: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 11vw;
+}
+
+.download-box {
+    width: 8vw;
+    height: 6vh;
+    font-size: 18px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 0;
+    background-color: #199c84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.download-box:hover {
+    background-color: rgb(178, 168, 98);
+}
+
+.tittle-img {
+    z-index: 11;
+    top: 60vh;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tittle-img img {
+    z-index: 11;
+    background-color: rgb(207, 196, 196);
+    height: 25vh;
+    width: 20vw;
+    margin: 40px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: rgb(207, 196, 196) 1px solid;
+}
+
+.tittle-img img:hover {
+    animation-duration: 400ms;
+    animation-delay: 0ms;
+    animation-name: donghua;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes donghua {
+    to {
+        width: 22vw;
+        height: 28vh;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+.show-box {
+    width: 60vw;
+    height: 70vh;
+    margin-top: 12vh;
+    flex-direction: column;
+    background-color: #fff3e4;
+    border: white 5px;
+    border-style: solid;
+    align-items: center;
+}
+
+.draw-box {
+    width: 70vw;
+    height: 80vh;
+    display: flex;
+    margin-top: 10vh;
+    flex-direction: column;
+    background-color: #fff3e4;
+    border: white 5px;
+    border-style: solid;
+    align-items: center;
+}
+
+.draw-tittle {
+    width: 63vw;
+    height: 9vh;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.notice-font {
+    font-size: 30px;
+}
+
+.notice-font2 {
+    font-size: 12px;
+}
+
+.draw-main {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    align-items: flex-end;
+}
+
+.draw-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 65vh;
+}
+
+ul.slides {
+    position: relative;
+    width: 37vw;
+    height: 52vh;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(89, 86, 86);
+    overflow: hidden;
+}
+
+li.slide {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 120px;
+    color: rgb(88, 88, 88);
+    transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1) {
+    background-image: url(../img/llmdexg.png);
+    background-size: 100% 100%;
+}
+
+.slide:nth-of-type(2) {
+    background-image: url(../img/人物.png);
+    background-size: 100% 100%;
+    left: 100%;
+}
+
+.slide:nth-of-type(3) {
+    background-color: #495F8C;
+    left: 200%;
+}
+
+input[type="radio"] {
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+
+.controls-visible {
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+
+.controls-visible label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(176, 175, 175);
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid #fff;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.controls-visible label:nth-of-type(1) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.controls-visible label:nth-of-type(2) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.controls-visible label:nth-of-type(3) {
+    background-color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.slide {
+    transform: translatex(0%);
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.slide {
+    transform: translatex(-100%);
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.slide {
+    transform: translatex(-200%);
+}
+
+
+/* Left/Right Button Classes Below */
+
+.navigator {
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    display: none;
+}
+
+.navigator i {
+    font-size: 32px;
+    color: #333;
+}
+
+.slides input[type="radio"]:nth-of-type(1):checked~.navigator:nth-of-type(1) {
+    display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(2):checked~.navigator:nth-of-type(2) {
+    display: flex;
+}
+
+.slides input[type="radio"]:nth-of-type(3):checked~.navigator:nth-of-type(3) {
+    display: flex;
+}
+
+.draw-word {
+    width: 28vw;
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: 20px;
+    font-size: 20px;
+    font-family: 幼圆;
+    color: #333;
+    line-height: 40px;
+}
